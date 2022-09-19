@@ -1,0 +1,24 @@
+.container {
+  width: 95%;
+  margin: 0 auto;
+}
+.seciton__padding {
+  padding: 4rem 0;
+}
+.section__title {
+  text-align: center;
+  padding: 4rem 0;
+  font-size: 3rem;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+@media screen and (min-width: 425px) {
+  .container {
+    width: 90%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    width: 85%;
+  }
+}

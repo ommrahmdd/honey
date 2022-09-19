@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 8px;
+}
+body {
+  background-color: $bgColor;
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+@media screen and (min-width: 425px) {
+  html {
+    font-size: 9px;
+  }
+}
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 10px;
+  }
+}

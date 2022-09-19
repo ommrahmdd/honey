@@ -1,0 +1,15 @@
+.btn {
+  padding: 0.8rem 3.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1.6rem;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+.primaryBtn {
+  color: black;
+  background-color: $sColor;
+  &:hover {
+    background-color: $mainColor;
+  }
+}
