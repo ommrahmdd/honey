@@ -4,4 +4,5 @@ export interface IBlog {
   content: string;
   img: string;
   title: string;
+  id: string;
 }

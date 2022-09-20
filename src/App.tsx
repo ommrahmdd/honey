@@ -6,6 +6,7 @@ import Footer from "./components/footer/Footer";
 const Home = lazy(() => import("./pages/home/Home"));
 const About = lazy(() => import("./pages/about/About"));
 const Blog = lazy(() => import("./pages/blog/Blog"));
+const SingleBlog = lazy(() => import("./pages/singleBlog/SignleBlog"));
 function App() {
   return (
     <Suspense fallback={<div>Loading ...</div>}>
@@ -13,6 +14,7 @@ function App() {
         <Navbar />
         <Switch>
           <Route path="/blog" exact component={Blog} />
+          <Route path="/blog/:blogID" exact component={SingleBlog} />
           <Route path="/about" exact component={About} />
           <Route path="/" exact component={Home} />
         </Switch>
