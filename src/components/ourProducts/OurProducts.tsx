@@ -18,7 +18,8 @@ export default function OurProducts() {
             </div>
             <h5>Organic Honey</h5>
             <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed vel.
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum
+              debitis consectetur est expedita architecto.
             </p>
             <button className="btn primaryBtn">View More</button>
           </div>
