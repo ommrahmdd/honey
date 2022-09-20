@@ -1,0 +1,13 @@
+.headerComponent {
+  padding: 3rem 0;
+  text-align: center;
+  span {
+    font-size: 1.6rem;
+    font-weight: 300;
+    text-transform: capitalize;
+  }
+  &__bold {
+    font-weight: 500 !important;
+    font-size: 2rem !important;
+  }
+}

@@ -16,6 +16,9 @@
         &:hover {
           opacity: 0.2;
         }
+        &:last-of-type {
+          transform: scale(1.3);
+        }
       }
     }
   }
