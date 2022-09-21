@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Header from "../../components/Header";
 import WhoWeAre_1 from "./../../assets/gallery_1.jpg";
 import WhoWeAre_2 from "./../../assets/WhoWeAre_1.jpg";
@@ -10,7 +10,13 @@ import feature_1 from "./../../assets/feature_1.png";
 import feature_2 from "./../../assets/feature_2.png";
 import feature_3 from "./../../assets/feature_3.png";
 import feature_4 from "./../../assets/feature_4.png";
+import { fadeIn } from "../../utilities/transition";
 export default function About() {
+  useEffect(() => {
+    setTimeout(() => {
+      fadeIn(document.querySelector(".about"));
+    }, 1200);
+  }, []);
   return (
     <main className="about">
       <Header header={["home", "  / ", "about"]} />

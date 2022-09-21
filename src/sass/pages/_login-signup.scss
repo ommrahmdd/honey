@@ -1,0 +1,58 @@
+.authPage {
+  min-height: 90vh;
+  width: 100%;
+
+  &__content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    &-form {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      div {
+        display: flex;
+        flex-direction: column;
+      }
+      label {
+        margin-bottom: 0.35rem;
+      }
+
+      .form__input {
+        padding: 0.5rem 1rem;
+        font-size: 1.4rem;
+        margin-bottom: 1.5rem;
+      }
+      .errorMessage {
+        margin-bottom: 1.5rem;
+        color: rgba(248, 38, 38, 0.855);
+        font-size: 1.6rem;
+      }
+      button {
+        margin-top: 2rem;
+        font-size: 1.3rem;
+      }
+    }
+    &-goToSignup {
+      margin-top: 4rem;
+      font-size: 1.4rem;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .authPage {
+    &__content {
+      .form__input {
+        width: 35rem;
+        padding: 1rem 2rem;
+      }
+      button {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}

@@ -1,3 +1,6 @@
+.homePage {
+  opacity: 0;
+}
 .homePage__header {
   height: 80vh;
   display: grid;
@@ -50,10 +53,11 @@
 // STYLE: media query
 @media screen and (min-width: 768px) {
   .homePage__header {
-    grid-template-columns: 2fr 4fr;
+    grid-template-columns: 3fr 4fr;
     .header {
       &__left {
         margin-top: 0;
+        padding: 4rem;
       }
       &__right {
         order: 2;

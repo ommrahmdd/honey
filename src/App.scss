@@ -12,11 +12,15 @@
 @import "./sass/layouts/contact";
 @import "./sass/layouts/footer";
 @import "./sass/layouts/header";
+@import "./sass/layouts/loading";
 
 // STYLE: pages
 @import "./sass/pages/home";
 @import "./sass/pages/about";
 @import "./sass/pages/blog";
 @import "./sass/pages/singleBlog";
+@import "./sass/pages/login-signup";
+@import "./sass/pages/addBlog";
+
 // STYLE: components
 @import "./sass/components/buttons";

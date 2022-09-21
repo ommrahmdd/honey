@@ -6,6 +6,11 @@
     font-weight: 300;
     text-transform: capitalize;
     cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    display: inline-block;
+    &:hover {
+      opacity: 0.3;
+    }
   }
   &__bold {
     font-weight: 500 !important;

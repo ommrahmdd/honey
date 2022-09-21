@@ -47,3 +47,24 @@ export let handleCloseOverlay = (el: Element | null) => {
     ease: Power3.easeInOut,
   });
 };
+
+export let handleOpenProfileDash = (el: Element | null) => {
+  let tl = new (gsap.timeline as any)();
+  tl.to(el, {
+    duration: 0.4,
+    opacity: 2,
+    display: "flex",
+    height: "100vh",
+    ease: Power3.easeInOut,
+  });
+};
+export let handleCloseProfileDash = (el: Element | null) => {
+  let tl = new (gsap.timeline as any)();
+  tl.to(el, {
+    duration: 0.4,
+    opacity: 0,
+    display: "none",
+    height: "0",
+    ease: Power3.easeInOut,
+  });
+};

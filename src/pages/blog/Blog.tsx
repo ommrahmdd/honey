@@ -1,10 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import Header from "../../components/Header";
 import { blogs } from "./blog_utilities";
-
+import { fadeIn } from "../../utilities/transition";
+import { getBlogs } from "../../firebase/blog";
 export default function Blog() {
   let history = useHistory();
+  useEffect(() => {
+    getBlogs().then((blogs) => {
+      console.log(blogs);
+    });
+    setTimeout(() => {
+      fadeIn(document.querySelector(".blog"));
+    }, 1200);
+  }, []);
   return (
     <div className="blog">
       <Header header={["home", " / ", "Blog"]} />

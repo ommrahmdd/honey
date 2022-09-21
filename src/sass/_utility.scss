@@ -12,6 +12,20 @@
   font-weight: 500;
   text-transform: capitalize;
 }
+
+.pageOverlay {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+  background-color: $bgColor;
+}
+
 @media screen and (min-width: 425px) {
   .container {
     width: 90%;
