@@ -12,6 +12,7 @@ const SingleBlog = lazy(() => import("./pages/singleBlog/SignleBlog"));
 const Login = lazy(() => import("./pages/login/Login"));
 const Signup = lazy(() => import("./pages/signup/Signup"));
 const addBlog = lazy(() => import("./pages/addBlog/AddBlog"));
+const Contact = lazy(() => import("./pages/contact/Contact"));
 function App() {
   return (
     <Suspense fallback={<Loading />}>
@@ -23,6 +24,7 @@ function App() {
           <Route path="/blog/:blogID" exact component={SingleBlog} />
           <Route path="/about" exact component={About} />
           <Route path="/login" exact component={Login} />
+          <Route path="/contact" exact component={Contact} />
           <Route path="/signup" exact component={Signup} />
           <Route path="/" exact component={Home} />
         </Switch>

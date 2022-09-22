@@ -83,7 +83,7 @@ export default function Navbar() {
           <h3 onClick={() => handleHistory("/about")}>About Us</h3>
           <h3 onClick={() => history.push("/")}>Shop</h3>
           <h3 onClick={() => handleHistory("/blog")}>Blog</h3>
-          <h3 onClick={() => history.push("/")}>Contact</h3>
+          <h3 onClick={() => handleHistory("/contact")}>Contact</h3>
         </div>
       </div>
       {/*--------------------------- END STYLE: Menu */}

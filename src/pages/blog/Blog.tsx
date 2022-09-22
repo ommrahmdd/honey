@@ -1,15 +1,19 @@
-import React, { useEffect } from "react";
+import React, { Dispatch, useEffect } from "react";
 import { useHistory } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
 import Header from "../../components/Header";
 import { blogs } from "./blog_utilities";
 import { fadeIn } from "../../utilities/transition";
 import { getBlogs } from "../../firebase/blog";
+import { getBlogsActionAsync } from "./../../store/actions";
+
 export default function Blog() {
   let history = useHistory();
+  let dispatch: Dispatch<any> = useDispatch();
+  let blogState = useSelector((state: any) => state.blogs.blogs);
   useEffect(() => {
-    getBlogs().then((blogs) => {
-      console.log(blogs);
-    });
+    dispatch(getBlogsActionAsync());
+    // ----- Animation
     setTimeout(() => {
       fadeIn(document.querySelector(".blog"));
     }, 1200);
@@ -20,22 +24,23 @@ export default function Blog() {
       <div className="container">
         <div className="blog__content">
           {/* STYLE: box */}
-          {blogs.map((blog, index) => (
-            <div
-              className="blog__content-box"
-              key={index}
-              onClick={() => history.push(`/blog/${blog.id}`)}
-            >
-              <div className="box__left">
-                <img src={blog.img} alt="Blog image" />
+          {blogState &&
+            blogState.map((blog: any, index: any) => (
+              <div
+                className="blog__content-box"
+                key={index}
+                onClick={() => history.push(`/blog/${blog._id}`)}
+              >
+                <div className="box__left">
+                  <img src={blog.img} alt="Blog image" />
+                </div>
+                <div className="box__right">
+                  <span className="date">{blog.date}</span>
+                  <h5>{blog.title}</h5>
+                  <p>{blog.overview}</p>
+                </div>
               </div>
-              <div className="box__right">
-                <span className="date">{blog.date}</span>
-                <h5>{blog.title}</h5>
-                <p>{blog.overview}</p>
-              </div>
-            </div>
-          ))}
+            ))}
         </div>
       </div>
     </div>
