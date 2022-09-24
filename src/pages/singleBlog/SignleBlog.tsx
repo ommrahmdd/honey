@@ -40,7 +40,10 @@ export default function SignleBlog() {
   };
   return (
     <div className="singleBlog">
-      <Header header={["home", " / ", "Blog", " / ", `${blogs[0].title}`]} />
+      {blog && (
+        <Header header={["home", " / ", "Blog", " / ", `${blog.title}`]} />
+      )}
+
       <div className="container">
         {blog && (
           <div className="singleBlog__content">

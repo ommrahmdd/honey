@@ -1,0 +1,43 @@
+.addProduct {
+  min-height: 80vh;
+
+  &__content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 4rem 0;
+  }
+
+  &__left {
+    div {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 1.5rem;
+    }
+    .addProduct__form-input {
+      padding: 0.5rem 1rem;
+      font-size: 1.4rem;
+      width: 30rem;
+    }
+    .addProduct__form-select {
+      padding: 1rem 1rem;
+    }
+  }
+  &__right {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .addProduct {
+    &__right {
+      display: block;
+
+      img {
+        width: 50rem;
+        height: 50rem;
+        filter: grayscale(0.4);
+      }
+    }
+  }
+}
