@@ -1,5 +1,5 @@
 .shopPage {
-  min-height: 80vh;
+  min-height: 90vh;
 }
 .shop {
   display: grid;
@@ -24,9 +24,14 @@
       overflow: hidden;
       margin-bottom: 1rem;
       transition: all 0.3s ease-in-out;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .productImg,
       img {
-        height: 100%;
-        width: 100%;
+        height: 9.5rem;
+        // width: 100%;
+
         object-fit: contain;
       }
     }
@@ -58,12 +63,14 @@
       }
     }
     &:hover &-imgBox {
-      scale: 1.2;
+      transform: translateY(-0.2rem);
+      scale: 1.1;
       filter: grayscale(0.5);
     }
   }
 }
 .inCart {
+  transition: all 0.3s ease-in-out;
   filter: grayscale(1);
 }
 @media screen and (min-width: 768px) {

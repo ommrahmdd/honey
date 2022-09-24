@@ -1,4 +1,4 @@
-import { addDoc, collection, doc, getDocs } from "firebase/firestore";
+import { addDoc, collection, doc, getDoc, getDocs } from "firebase/firestore";
 import { IProduct } from "../models/IProduct";
 import { db } from "./config";
 
@@ -14,4 +14,13 @@ export let getAllProducts = async () => {
     _id: product.id,
   }));
   return products;
+};
+
+export let getProduct = async (productID: string) => {
+  let docRef = doc(db, "products", productID);
+  let docsRef = await getDoc(docRef);
+  return {
+    ...docsRef.data(),
+    _id: docsRef.id,
+  };
 };

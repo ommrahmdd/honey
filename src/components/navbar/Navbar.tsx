@@ -96,7 +96,11 @@ export default function Navbar() {
           <div className="navbar__content-links">
             <img src={searchIcon} alt="search" />
             <img src={profileIcon} alt="profile" onClick={handleProfile} />
-            <img src={bagIcon} alt="bag" />
+            <img
+              src={bagIcon}
+              alt="bag"
+              onClick={() => handleHistory("/cart")}
+            />
             <img
               src={menuIcon}
               alt="menu"
