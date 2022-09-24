@@ -1,4 +1,6 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
+
 import product_1 from "./../../assets/product_1.png";
 import product_2 from "./../../assets/product_2.png";
 import product_3 from "./../../assets/product_3.png";
@@ -7,6 +9,13 @@ import gallery_1 from "./../../assets/gallery_1.jpg";
 import gallery_2 from "./../../assets/gallery_2.jpg";
 import gallery_3 from "./../../assets/gallery_3.jpg";
 export default function OurProducts() {
+  let history = useHistory();
+
+  let handleShopNOW = () => {
+    window.scrollTo(0, 0);
+    history.push("/shop");
+  };
+
   return (
     <>
       <section className="ourProducts seciton__padding">
@@ -21,7 +30,9 @@ export default function OurProducts() {
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum
               debitis consectetur est expedita architecto.
             </p>
-            <button className="btn primaryBtn">View More</button>
+            <button className="btn primaryBtn" onClick={handleShopNOW}>
+              View More
+            </button>
           </div>
           <div className="ourProducts__content-box">
             <div className="box__imgBox">
@@ -31,7 +42,9 @@ export default function OurProducts() {
             <p>
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed vel.
             </p>
-            <button className="btn primaryBtn">View More</button>
+            <button className="btn primaryBtn" onClick={handleShopNOW}>
+              View More
+            </button>
           </div>
           <div className="ourProducts__content-box">
             <div className="box__imgBox">
@@ -41,7 +54,9 @@ export default function OurProducts() {
             <p>
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed vel.
             </p>
-            <button className="btn primaryBtn">View More</button>
+            <button className="btn primaryBtn" onClick={handleShopNOW}>
+              View More
+            </button>
           </div>
           <div className="ourProducts__content-box">
             <div className="box__imgBox">
@@ -51,7 +66,9 @@ export default function OurProducts() {
             <p>
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed vel.
             </p>
-            <button className="btn primaryBtn">View More</button>
+            <button className="btn primaryBtn" onClick={handleShopNOW}>
+              View More
+            </button>
           </div>
         </div>
       </section>

@@ -13,7 +13,7 @@ export default function Shop() {
   let [products, setProducts] = useState<IProduct[] | null>();
   let dispatch = useDispatch();
   useEffect(() => {
-    getAllProducts().then((data) => {
+    getAllProducts().then((data: any) => {
       setProducts(data);
     });
   }, []);
