@@ -130,9 +130,9 @@ export default function Shop() {
       {/* STYLE: --------- END filter */}
       <Header header={["home", "/", "Shop"]} />
       <div className="container">
-        <section className="shop">
-          {products ? (
-            products.map((product, index) => (
+        {products ? (
+          <section className="shop">
+            {products.map((product, index) => (
               <div className="shop__box" key={index}>
                 <div className="shop__box-imgBox">
                   <LazyLoadImage
@@ -155,14 +155,14 @@ export default function Shop() {
                   ></i>
                 </div>
               </div>
-            ))
-          ) : (
-            <div className="shopLoading">
-              <img src={bee} alt="loading" />
-              <p>Loading</p>
-            </div>
-          )}
-        </section>
+            ))}
+          </section>
+        ) : (
+          <div className="shopLoading">
+            <img src={bee} alt="loading" />
+            <p>Loading</p>
+          </div>
+        )}
       </div>
     </main>
   );

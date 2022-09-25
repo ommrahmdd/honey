@@ -91,7 +91,7 @@ export default function Navbar() {
       <div className="container">
         <div className="navbar__content">
           <div className="logo">
-            <img src={logo} alt="logo" onClick={() => history.push("/")} />
+            <img src={logo} alt="logo" onClick={() => handleHistory("/")} />
           </div>
           <div className="navbar__content-links">
             <img src={searchIcon} alt="search" />
