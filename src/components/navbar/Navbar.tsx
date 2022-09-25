@@ -79,11 +79,11 @@ export default function Navbar() {
         />
         <img src={logo} alt="overlay" className="menu__overylay" />
         <div className="menu__content">
-          <h3 onClick={() => handleHistory("/")}>Home</h3>
-          <h3 onClick={() => handleHistory("/about")}>About Us</h3>
-          <h3 onClick={() => handleHistory("/shop")}>Shop</h3>
-          <h3 onClick={() => handleHistory("/blog")}>Blog</h3>
-          <h3 onClick={() => handleHistory("/contact")}>Contact</h3>
+          <button onClick={() => handleHistory("/")}>Home</button>
+          <button onClick={() => handleHistory("/about")}>About Us</button>
+          <button onClick={() => handleHistory("/shop")}>Shop</button>
+          <button onClick={() => handleHistory("/blog")}>Blog</button>
+          <button onClick={() => handleHistory("/contact")}>Contact</button>
         </div>
       </div>
       {/*--------------------------- END STYLE: Menu */}
