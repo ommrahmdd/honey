@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import Header from "../../components/Header";
 import WhoWeAre_1 from "./../../assets/gallery_1.jpg";
-import WhoWeAre_2 from "./../../assets/WhoWeAre_1.jpg";
+import WhoWeAre_2 from "./../../assets/whoWeAre_1.jpg";
 import everyThing_1 from "./../../assets/about_everything_1.jpg";
 import everyThing_2 from "./../../assets/about_everything_2.jpg";
 import bee from "./../../assets/bee-sm.png";
