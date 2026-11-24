@@ -1,7 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 import { getAuth } from "firebase/auth";
-import { getStorage } from "firebase/storage";
 const firebaseConfig = {
   apiKey: "AIzaSyB-lFKz_EczC1Lyxi69vb4fVegDLwRj3G4",
   authDomain: "honey-bee-website.firebaseapp.com",
@@ -14,4 +13,3 @@ const firebaseConfig = {
 let app = initializeApp(firebaseConfig);
 export let db = getFirestore(app);
 export let auth = getAuth(app);
-export let storage = getStorage(app);
