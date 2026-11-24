@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import Header from "../../components/Header";
 import { useHistory } from "react-router-dom";
-import { v4 } from "uuid";
-import { storage } from "./../../firebase/config";
-import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
+import { uploadImage } from "../../cloudinary";
 import { addBlog } from "../../firebase/blog";
 import Compress from "browser-image-compression";
 type InitialTypes = {
@@ -47,19 +45,15 @@ export default function AddBlog() {
   };
   let handleSubmit = (e: any) => {
     e.preventDefault();
-    let imgName = `${blog.img.name}${v4()}`;
-    let imgRef = ref(storage, `blog/${imgName}`);
-    uploadBytes(imgRef, blog.img).then((uploadFile) => {
-      getDownloadURL(uploadFile.ref).then((url) => {
-        blog.img = url;
-        addBlog(blog).then((d) => {
-          setBlog({
-            title: "",
-            overview: "",
-            content: "",
-            img: "",
-            date: "",
-          });
+    uploadImage(blog.img).then((url) => {
+      blog.img = url;
+      addBlog(blog).then((d) => {
+        setBlog({
+          title: "",
+          overview: "",
+          content: "",
+          img: "",
+          date: "",
         });
       });
     });

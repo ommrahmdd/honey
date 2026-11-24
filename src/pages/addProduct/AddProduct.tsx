@@ -1,8 +1,6 @@
 import React, { useState } from "react";
-import { v4 } from "uuid";
-import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
 import Compress from "browser-image-compression";
-import { storage } from "../../firebase/config";
+import { uploadImage } from "../../cloudinary";
 import { IProduct } from "../../models/IProduct";
 import Header from "../../components/Header";
 import addProductImg from "./../../assets/addProduct.jpg";
@@ -38,14 +36,10 @@ export default function AddProduct() {
 
   let handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    let imgName = `${product.img.name}${v4()}`;
-    let imgRef = ref(storage, `/products/${imgName}`);
-    uploadBytes(imgRef, product.img).then((uploadedImg) => {
-      getDownloadURL(uploadedImg.ref).then((url) => {
-        product.img = url;
-        addNewProduct(product).then(() => {
-          setProduct(INITIALSTATE);
-        });
+    uploadImage(product.img as any).then((url) => {
+      product.img = url;
+      addNewProduct(product).then(() => {
+        setProduct(INITIALSTATE);
       });
     });
   };
